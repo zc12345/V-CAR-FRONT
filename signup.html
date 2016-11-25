@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title title="V car注册">V car注册</title>
+		<link href="css/bootstrap-3.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery-3.0.0.min.js"></script>
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/frame.css" />
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="container">
+				<div class="row visible-on">	
+					<div class="col-xs-1 col-sm-1">
+						<a href="signup.html">
+						<button type="button" class="btn btn-default" title="注册">
+						<span class="glyphicon glyphicon-tower">&nbsp;注册</span>
+						</button>
+						</a>
+					</div>
+					<div class="col-xs-1 col-sm-1">
+						<a href="login.html">
+						<button type="button" class="btn btn-default" title="登录">
+						<span class="glyphicon glyphicon-log-in">&nbsp;登录</span>
+						</button>
+						</a>
+					</div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1">
+						<a href="index.html">
+						<button type="button" class="btn btn-default" title="首页">
+      					<span class="glyphicon glyphicon-home">&nbsp;首页</span>
+   						</button>
+						</a>
+					</div>
+					<div class="col-xs-1 col-sm-1">
+						<a href="shoppingcart.html">
+						<button type="button" class="btn btn-default" title="购物车">
+      					<span class="glyphicon glyphicon-shopping-cart">&nbsp;购物车</span>
+   						</button>
+						</a>
+					</div>					
+					<div class="col-xs-1 col-sm-1">
+						<a >
+						<button type="button" class="btn btn-default" title="退出">
+      					<span class="glyphicon glyphicon-log-out">&nbsp;退出</span>
+   						</button>	
+						</a>
+					</div>
+					
+					
+				</div>
+			</div>			
+						
+		</div>
+		<div id="top">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-xs-6 col-sm-3">
+							<div class="logo">
+								<img src="img/logo.jpg" />
+								<span style="color: #FFFFFF;"><center>V car</center></span>
+							</div>
+						</div>
+						
+						<div class="clearfix visible-xs"></div>
+						<div class="col-xs-12 col-sm-6">
+							<p>&nbsp;</p><p>&nbsp;</p>
+							<div class="search_box">
+								<nav class="navbar navbar-default" role="navigation" style="background-color: #000000;border: 0px;">
+							      <form class="navbar-form navbar-left" role="search" style="width: 100%;padding: 0;">
+							         <div class="form-group" style="width: 80%;">
+							            <input type="text" class="form-control" placeholder="" style="width: 100%;">
+							         </div>
+							         <button type="submit" class="btn btn-default"style="width: 19%;">搜索</button>
+							      </form>    
+								</nav>
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-3"></div>
+					</div>
+				</div>
+		</div>
+		<div class="container" style="padding: 0;margin: 0;width: 100%;background-image: url(img/background.jpg);">
+			<div class="row">	
+				<div class="col-xs-0 col-sm-0 col-md-0 col-lg-1" ><div class="left"></div></div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10"  >
+					<div id="main"style="height: 1139px;background-image:url(img/signupbg2.jpg)">
+	                    <div style="margin-left: 630px;width:656px ;height:1139px ;border: 0px;background-color: #FFFFFF;">
+						<div style="width: 656px;height:480px ;border:0px;background-image:url(img/signupbg1.jpg)"></div>
+							<form id="myform" method="post" >
+								<table style="border-collapse:separate; border-spacing:50px;font-size: 16px;">
+								<tr align="left">
+									<td><b>用户注册</b></td>
+								</tr>
+								<tr align="left">
+									<td>请输入账号名</td><td><input type="text" name="username" id="username"><td style="font-size: 10px;">（长度为4-10个字符，只允许字母和数字）</td></td>
+								</tr>
+							    <tr align="left">
+									<td>请输入email邮箱</td><td><input type="text" name="email" id="email"></td>
+								</tr>
+								<tr align="left">
+									<td>请输入密码</td><td><input type="password" name="password" id="password"><td style="font-size: 10px;">（长度为4-12个字符，只允许字母和数字）</td></td>
+								</tr>
+								<tr align="left">
+									<td>确认密码</td><td><input type="password" name="password1" id="password1"></td>
+								</tr>
+								
+								<tr align="center">
+									<td colspan="2"> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+										<input type="button" value="提交" onclick="check();" style="width: 120px;height: 50px;background-color:#767676"/> 
+										<input type="reset" value="重置" onclick="" style="width: 120px;height: 50px;background-color:#767676"/>
+									</td>
+								</tr>
+								<script type="text/javascript">
+									function check(){
+										var username=document.getElementById("username");
+										var email=document.getElementById("email");
+										var passwd=document.getElementById("password");
+										var passwd1=document.getElementById("password1");
+										if((username.value=='')||(email.value=='')||(passwd.value=='')||(passwd1.value=='')){
+											alert("输入不能为空！");
+											return false;
+										}
+										if(username.value.length<4){
+											alert("用户名过短！");
+											return false;
+										}
+										if(username.value.length>10){
+											alert("用户名过长！");
+											return false;
+										}
+										if(email.value.length>20){
+											alert("邮箱输入长度超出限制！");
+											return false;
+										}
+										if(passwd.value.length<4){
+											alert("密码长度过短！");
+											return false;
+										}
+										if(passwd.value.length>12){
+											alert("密码输入长度超出限制！");
+											return false;
+										}
+										if(!/^[A-Za-z0-9]+$/.test(username.value)){
+											alert("用户名格式不正确！");  
+										}
+										if(!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(email.value)) {  
+											alert("email格式不正确！");  
+										}
+										if(!/^[A-Za-z0-9]+$/.test(passwd.value)){
+											alert("密码格式不正确！");  
+										}
+										if(passwd.value!=passwd1.value){
+											alert("密码输入不相同，请再次输入！");
+											return false;
+										}
+									}
+								</script>
+								</table>
+							</form>
+							</div>
+					</div>
+					<div id="bottom">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-6 col-sm-3">
+									<h1>购买支持</h1>
+									<p>打造您的定制车</p>
+									<p>车型比较</p>
+									<p>查找经销商</p>
+								</div>
+								<div class="col-xs-6 col-sm-3">
+									<h1>在线服务</h1>
+									<p>订阅</p>
+									<p>网络客服</p>
+									<p>电子杂志</p>
+								</div>
+						
+								<div class="clearfix visible-xs"></div>
+						
+								<div class="col-xs-6 col-sm-3">
+									<h1>幕后</h1>
+									<p>赛车&amp;活动</p>
+									<p>驾驶体验</p>
+									<p>参观博物馆</p>
+								</div>
+								<div class="col-xs-6 col-sm-3">
+									<h1>公司</h1>
+									<p>新闻发布</p>
+									<p>工作机会</p>
+									<p>联系信息</p>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+					<div id="footer">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-4 col-sm-4">
+									<div class="logo">
+										<img src="img/logo.jpg" />
+										<span style="color: #FFFFFF;"><center>V car</center></span>
+									</div>
+								</div>
+								<div class="col-xs-4 col-sm-4">
+									<div class="copyright" style="margin-top: 50px;padding: 10px;">
+										<span >Copyright &copy; 2004-2016 V car, All Rights Reserved</span>
+									</div>
+									<div class="other" style="margin-top: 20px;">
+										<nav>
+										<a href="#">法律声明</a>
+										<a href="#">知识产权</a>
+										<a href="#">网站合作</a>
+										<a href="#">联系我们</a>
+										</nav>
+									</div>
+								</div>
+								<div class="col-xs-4 col-sm-4"></div>
+							</div>
+						</div>		
+					</div>
+
+				</div>
+				<div class="col-xs-0 col-sm-0 col-md-0 col-lg-1" ><div class="right"></div></div>
+			</div>
+		</div>				
+				
+	</body>
+
+</html>

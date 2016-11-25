@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title title="V car购物车">V car购物车</title>
+		<link href="css/bootstrap-3.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery-3.0.0.min.js"></script>
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/frame.css" />
+		<script type="text/javascript">
+		    $(function() {
+		       $("#checkAll").click(function() {
+		            $('input[name="subBox"]').attr("checked",this.checked); 
+		        });
+		        var $subBox = $("input[name='subBox']");
+		        $subBox.click(function(){
+		            $("#checkAll").attr("checked",$subBox.length == $("input[name='subBox']:checked").length ? true : false);
+		        });
+		    });
+		</script>
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="container">
+				<div class="row visible-on">	
+					<!--此处与java文件有接口调用，调用user的name属性-->
+					<div class="col-xs-3 col-sm-3"style="margin-top: 5px;">
+						<a href="login.html" >XX</a>您好，欢迎登录！
+					</div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1"></div>
+					<div class="col-xs-1 col-sm-1">
+						<a href="index.html">
+						<button type="button" class="btn btn-default" title="首页">
+      					<span class="glyphicon glyphicon-home">&nbsp;首页</span>
+   						</button>
+						</a>
+					</div>
+					<div class="col-xs-1 col-sm-1">
+						<a href="user.html">
+						<button type="button" class="btn btn-default" title="个人中心">
+      					<span class="glyphicon glyphicon-user">&nbsp;账户</span>
+   						</button>
+						</a>
+					</div>					
+					<div class="col-xs-1 col-sm-1">
+						<a >
+						<button type="button" class="btn btn-default" title="退出">
+      					<span class="glyphicon glyphicon-log-out">&nbsp;退出</span>
+   						</button>	
+						</a>
+					</div>
+					
+					
+				</div>
+			</div>			
+						
+		</div>
+		<div id="top">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-xs-6 col-sm-3">
+							<div class="logo">
+								<img src="img/logo.jpg" />
+								<span style="color: #FFFFFF;"><center>V car</center></span>
+							</div>
+						</div>
+						
+						<div class="clearfix visible-xs"></div>
+						<div class="col-xs-12 col-sm-6">
+							<p>&nbsp;</p><p>&nbsp;</p>
+							<div class="search_box">
+								<nav class="navbar navbar-default" role="navigation" style="background-color: #000000;border: 0px;">
+							      <form class="navbar-form navbar-left" role="search" style="width: 100%;padding: 0;">
+							         <div class="form-group" style="width: 80%;">
+							            <input type="text" class="form-control" placeholder="" style="width: 100%;">
+							         </div>
+							         <button type="submit" class="btn btn-default"style="width: 19%;">搜索</button>
+							      </form>    
+								</nav>
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-3"></div>
+					</div>
+				</div>
+		</div>
+
+		<div class="container" style="padding: 0;margin: 0;width: 100%;background-image: url(img/background.jpg);">
+			<div class="row">	
+				<div class="col-xs-0 col-sm-0 col-md-0 col-lg-1" ><div class="left"></div></div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10"  >
+					<div id="main">
+	                    <div id="list">
+	                    	<div class="container" style="height: auto;margin-top: 150px;">
+	                    		<h1 style="color: #000000 ;">购物车</h1>
+	                    		<p></p>
+	                    		<div style="background: #D7D7D7;height: 135px;border-bottom: 1px solid;">
+	                    			<h1>全部商品</h1>
+	                    			<div class="container" style="padding-top: 60px;">
+										<div class="row">
+											<div class="col-xs-1 "> <p><input type="checkbox" id="checkAll" value="全选" />&nbsp;全选</p></div>
+											<div class="col-xs-3"><p>商品</p></div>
+											<div class="col-xs-2"><p>单价</p></div>
+											<div class="col-xs-2"><p>数量</p></div>
+											<div class="col-xs-2"><p>小计</p></div>
+											<div class="col-xs-2"><p>购买日期</p></div>
+										</div>
+									</div>
+	                    		</div>
+	                    		
+	                    		<!--购物车商品1信息-->
+	                    		<div class="row" style="margin-top: 10px;">
+								<div class="col-xs-1 "> <p><input type="checkbox" name="subBox" value="选择" />&nbsp;1</p></div>
+								<div class="col-xs-3"><img src="img/new1.png" style="height: 160px;"/><p><center>全新 718 Cayman</center></p></div>
+								<div class="col-xs-2"><p>1,755,000 元</p></div>
+								<div class="col-xs-2"><p>1.00</p></div>
+								<div class="col-xs-2"><p>1,755,000 元</p></div>
+								<div class="col-xs-2"><p>2016/7/22</p></div>
+								</div>
+								
+								<!--底部边线-->
+								<hr aligh="center" width="100%"  noshade="value" style="background-color: #000000;border-top: solid #000000 1px;"/>
+								<p>
+								<div style="float: right;border: 1px #080808;">
+									<span>已选择</span>
+									<span>1</span>
+									<span>件商品</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<span><b>总计:</b></span>
+									<span style="color: red;">1,755,000 </span>
+									<span>元</span>
+								</div>
+								</p>
+								
+								<p></p>
+								<p>
+								<span><input type="submit" value="确认结账" style="width:140px;height:40px;background:#999999;color:white;float: right;"></span>
+                       			<span><input type="submit" value="继续购买" style="width:140px;height:40px;background:#999999;color:white;float: right;"></span>
+								</p>
+							</div>
+	                    </div>
+					</div>
+					<div id="bottom">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-6 col-sm-3">
+									<h1>购买支持</h1>
+									<p>打造您的定制车</p>
+									<p>车型比较</p>
+									<p>查找经销商</p>
+								</div>
+								<div class="col-xs-6 col-sm-3">
+									<h1>在线服务</h1>
+									<p>订阅</p>
+									<p>网络客服</p>
+									<p>电子杂志</p>
+								</div>
+						
+								<div class="clearfix visible-xs"></div>
+						
+								<div class="col-xs-6 col-sm-3">
+									<h1>幕后</h1>
+									<p>赛车&amp;活动</p>
+									<p>驾驶体验</p>
+									<p>参观博物馆</p>
+								</div>
+								<div class="col-xs-6 col-sm-3">
+									<h1>公司</h1>
+									<p>新闻发布</p>
+									<p>工作机会</p>
+									<p>联系信息</p>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+					<div id="footer">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-4 col-sm-4">
+									<div class="logo">
+										<img src="img/logo.jpg" />
+										<span style="color: #FFFFFF;"><center>V car</center></span>
+									</div>
+								</div>
+								<div class="col-xs-4 col-sm-4">
+									<div class="copyright" style="margin-top: 50px;padding: 10px;">
+										<span >Copyright &copy; 2004-2016 V car, All Rights Reserved</span>
+									</div>
+									<div class="other" style="margin-top: 20px;">
+										<nav>
+										<a href="#">法律声明</a>
+										<a href="#">知识产权</a>
+										<a href="#">网站合作</a>
+										<a href="#">联系我们</a>
+										</nav>
+									</div>
+								</div>
+								<div class="col-xs-4 col-sm-4"></div>
+							</div>
+						</div>		
+					</div>
+
+				</div>
+				<div class="col-xs-0 col-sm-0 col-md-0 col-lg-1" ><div class="right"></div></div>
+			</div>
+		</div>				
+				
+	</body>
+
+</html>
